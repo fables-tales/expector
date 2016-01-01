@@ -1,0 +1,7 @@
+[package]
+name = "expector"
+version = "0.1.0"
+authors = ["Sam Phippen <samphippen@googlemail.com>"]
+
+[dependencies]
+descriptor = {path = "/Users/sam/dev/descriptor"}
