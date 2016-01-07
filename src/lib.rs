@@ -1,3 +1,5 @@
+pub mod should_syntax;
+
 pub struct ExpectationTarget<A> {
     target: A
 }
