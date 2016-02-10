@@ -4,3 +4,6 @@ version = "0.1.0"
 authors = ["Sam Phippen <samphippen@googlemail.com>"]
 license="MIT"
 description="A bad expectations framework"
+
+[features]
+pattern = []

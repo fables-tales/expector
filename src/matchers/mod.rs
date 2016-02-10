@@ -1,3 +1,5 @@
+mod contains;
+
 use super::Matcher;
 
 pub struct EqualityMatcher<E> {
@@ -20,6 +22,7 @@ impl <A> Matcher<Vec<A>> for BeAnEmptyVectorMatcher {
 
 pub mod prelude {
     use super::*;
+    pub use super::contains::contain;
 
     pub fn eq<E>(expected: E) -> EqualityMatcher<E> {
         EqualityMatcher { expected: expected }
