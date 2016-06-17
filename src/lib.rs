@@ -1,3 +1,5 @@
+#![cfg_attr(feature = "pattern", feature(pattern))]
+
 pub mod matchers;
 pub mod prelude;
 
