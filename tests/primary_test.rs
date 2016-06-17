@@ -1,37 +1,5 @@
-use super::Matcher;
-
-pub struct EqualityMatcher<E> {
-    expected: E
-}
-
-impl <E, A> Matcher<A> for EqualityMatcher<E> where E: PartialEq<A> {
-    fn matches(self, target: &A) -> bool {
-        &self.expected == target
-    }
-}
-
-pub struct BeAnEmptyVectorMatcher;
-
-impl <A> Matcher<Vec<A>> for BeAnEmptyVectorMatcher {
-    fn matches(self, target: &Vec<A>) -> bool {
-        target.len() == 0
-    }
-}
-
-pub mod prelude {
-    use super::*;
-
-    pub fn eq<E>(expected: E) -> EqualityMatcher<E> {
-        EqualityMatcher { expected: expected }
-    }
-
-    pub fn be_an_empty_vector() -> BeAnEmptyVectorMatcher {
-        BeAnEmptyVectorMatcher
-    }
-}
-
-#[cfg(test)]
-use prelude::*;
+extern crate expector;
+use expector::prelude::*;
 
 #[test]
 fn equality_matcher_matches_things_that_are_equal() {
