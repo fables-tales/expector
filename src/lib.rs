@@ -11,6 +11,11 @@ impl <A> ExpectationTarget<A> {
             panic!("Expector match failed");
         }
     }
+    pub fn to_not<T: Matcher<A>>(&self, matcher: T) {
+        if matcher.matches(&self.target) {
+            panic!("Expector not-match failed");
+        }
+    }
 }
 
 pub trait Matcher<A> {
