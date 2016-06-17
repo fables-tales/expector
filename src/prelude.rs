@@ -1,2 +1,6 @@
 pub use matchers::prelude::*;
-pub use super::expect;
+use ExpectationTarget;
+
+pub fn expect<A>(target: A) -> ExpectationTarget<A> {
+    ExpectationTarget { target: target }
+}
