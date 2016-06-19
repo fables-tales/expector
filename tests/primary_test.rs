@@ -1,5 +1,5 @@
 extern crate expector;
-use expector::prelude::*;
+use expector::dsl::*;
 
 #[test]
 fn equality_matcher_matches_things_that_are_equal() {

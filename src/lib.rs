@@ -1,5 +1,5 @@
 pub mod matchers;
-pub mod prelude;
+pub mod dsl;
 
 pub struct ExpectationTarget<A> {
     target: A
