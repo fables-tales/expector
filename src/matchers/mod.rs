@@ -1,4 +1,4 @@
-pub mod prelude;
+pub mod dsl;
 
 use super::Matcher;
 

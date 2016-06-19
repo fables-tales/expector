@@ -6,7 +6,7 @@
 1. In your `Cargo.toml` add `expector=0.1.0`
 2. `cargo build`
 3. `extern crate expector`
-4. `use expector::prelude::*`
+4. `use expector::dsl::*`
 
 Example:
 ```
@@ -23,10 +23,10 @@ expect(a).to(eq(b));
 ## Structure
 
 - `expector`: structs and traits for expectations
-- `expector::prelude`: user facing API for expector crate
+- `expector::dsl`: user facing API for expector crate
 - `expector::matchers`: structs and traits for matchers
-- `expector::matchers::prelude`: user facing API for matchers,
-  required by `expector::prelude`
+- `expector::matchers::dsl`: user facing API for matchers,
+  required by `expector::dsl`
 
 ## Local Development
 

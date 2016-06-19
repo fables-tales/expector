@@ -1,4 +1,4 @@
-pub use matchers::prelude::*;
+pub use matchers::dsl::*;
 use ExpectationTarget;
 
 pub fn expect<A>(target: A) -> ExpectationTarget<A> {
